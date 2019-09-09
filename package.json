@@ -1,0 +1,65 @@
+{
+  "name": "shakedown",
+  "version": "1.0.0",
+  "description": "refactor",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node server.js",
+    "populate": "babel-node bin/populate-db.js",
+    "dev": "nodemon --exec npm start",
+    "prod": "pm2 start process.json --env prod",
+    "test": "jest --runInBand --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "verbose": false,
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "config"
+    ],
+    "testURL": "http://localhost/",
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-imports": "^1.5.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
+    "jest": "^22.4.3",
+    "node-mocks-http": "^1.5.8",
+    "nodemon": "^1.17.4"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "config": "^1.30.0",
+    "cookie-parser": "^1.4.3",
+    "csvtojson": "^1.1.9",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "inline-css": "^2.4.0",
+    "jsonwebtoken": "^8.2.1",
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2",
+    "moment": "^2.22.0",
+    "mongoose": "^5.4.14",
+    "node-fetch": "^2.1.2",
+    "nodemailer": "^4.6.4",
+    "query-string": "^6.0.0",
+    "redis": "^2.8.0",
+    "request": "^2.85.0",
+    "set-cookie-parser": "^2.1.1",
+    "stripe": "^5.8.0",
+    "uuid": "^3.2.1"
+  }
+}
